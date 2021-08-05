@@ -49,7 +49,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Comfortaa', cursive;
   }
 
   a {
@@ -70,6 +70,7 @@ export const GlobalStyle = createGlobalStyle`
 export const SectionTitle = styled.h1`
   font-size: 1.5rem;
   text-align: center;
+  font-family: 'Indie Flower', cursive;
   
   @media screen and (min-width: 1024px) {
     font-size: 2rem;
@@ -81,6 +82,7 @@ export const SectionSubtitle = styled.span`
   font-size: 0.8rem;
   margin-bottom: 3rem;
   text-align: center;
+  font-family: 'Source Code Pro', monospace;
   
   @media screen and (min-width: 768px) {
     margin-bottom: 4rem;
