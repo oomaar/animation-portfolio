@@ -1,14 +1,16 @@
-// import { ThemeProvider } from 'styled-components'
+import { ThemeProvider } from 'styled-components';
 import "../font.css";
-import { GlobalStyle } from "../GlobalStyle";
+import { darkTheme, GlobalStyle, lightTheme } from "../GlobalStyle";
 
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <GlobalStyle />
-      {/* <ThemeProvider theme={theme}> */}
-      <Component {...pageProps} />
-      {/* </ThemeProvider> */}
+      <ThemeProvider theme={lightTheme}>
+        <ThemeProvider theme={darkTheme}>
+          <GlobalStyle />
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </ThemeProvider>
     </>
   )
 }
