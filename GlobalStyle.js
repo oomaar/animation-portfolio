@@ -1,6 +1,12 @@
 import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
 
+// View Ports
+export const smScreen = 280;
+export const mdScreen = 568;
+export const lgScreen = 768;
+export const xlScreen = 1024;
+
 const hueColor = '240';
 
 export const lightTheme = {
