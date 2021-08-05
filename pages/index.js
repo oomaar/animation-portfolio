@@ -21,7 +21,7 @@ const Application = styled.div``;
 
 const Main = styled.main`
   padding: 2rem 0 4rem;
-  max-width: 768px;
+  max-width: 1024px;
   margin: 0 1.5rem;
   
   @media screen and (min-width: 768px) {
