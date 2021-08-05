@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styled from 'styled-components';
 import { Feature } from "../components";
+import resumeData from "../data/resumeData.json";
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
       </Head>
 
       <Main>
-        <Feature />
+        <Feature data={resumeData.feature} />
       </Main>
     </Application>
   );

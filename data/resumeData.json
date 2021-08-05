@@ -1,0 +1,20 @@
+{
+  "feature": {
+    "name": "Omar Hassan",
+    "bio": "I build web apps and amazing frontends, I solve variant web problems and also write clean code to make things work.",
+    "social": [
+      {
+        "name": "github",
+        "url": "https://github.com/oomaar"
+      },
+      {
+        "name": "linkedin",
+        "url": "https://www.linkedin.com/in/omar-hassan-8b1869137"
+      },
+      {
+        "name": "facebook",
+        "url": "https://www.facebook.com/omarhassan16694"
+      }
+    ]
+  }
+}
