@@ -1,18 +1,15 @@
-import { Section, SectionTitle } from "../../GlobalStyle";
+import { Section, SectionTitle, Button } from "../../Global/GlobalStyle";
 import {
     Container,
     SubContainer,
     AboutMe,
-    Button,
 } from "./styledAbout";
 
 export const About = ({ data }) => {
     return (
         <Section id="about">
             <Container>
-                <SubContainer>
-                    <SectionTitle>About</SectionTitle>
-                </SubContainer>
+                <SectionTitle>About</SectionTitle>
                 <AboutMe>{data.description}</AboutMe>
                 <SubContainer>
                     <Button download="" href="#">

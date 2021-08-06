@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
+import { translateRight } from "./GlobalAnimation";
 
 // View Ports
 export const smScreen = 280;
@@ -80,24 +81,34 @@ export const Section = styled.section`
 export const SectionTitle = styled.h1`
   font-size: 1.5rem;
   font-family: 'Indie Flower', cursive;
+  animation: ${translateRight} 2s ease none;
   
   @media screen and (min-width: 1024px) {
     font-size: 2rem;
   }
 `;
 
-export const SectionSubtitle = styled.span`
-  display: block;
+// Buttons
+export const Button = styled.a`
+  padding: 0.8rem 1.6rem;
+  background-color: ${({ theme }) => theme.colors.firstColor};
+  color: #fff;
+  border-radius: 1rem;
+  text-transform: ${({ up }) => up ? 'uppercase' : 'capitalize'};
+  letter-spacing: 0.1rem;
   font-size: 0.8rem;
-  margin-bottom: 3rem;
-  text-align: center;
-  font-family: 'Source Code Pro', monospace;
-  
-  @media screen and (min-width: 768px) {
-    margin-bottom: 4rem;
+  transition: 0.5s;
+  opacity: 0.94;
+
+  :hover {
+    opacity: 1;
   }
-  
-  @media screen and (min-width: 1024px) {
+
+  @media screen and (min-width: ${mdScreen}px) {
     font-size: 0.9rem;
+  }
+
+  @media screen and (min-width: ${xlScreen}px) {
+    font-size: 1rem;
   }
 `;

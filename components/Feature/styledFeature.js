@@ -1,43 +1,6 @@
-import styled, { keyframes } from 'styled-components';
-import { lgScreen, mdScreen, xlScreen } from '../../GlobalStyle';
-
-const imageTranslate = keyframes`
-  from {
-    transform: translateX(1000px);
-    opacity: 0;
-  } to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-`;
-
-const featureTranslate = keyframes`
-  from {
-    transform: translateX(-1000px);
-    opacity: 0;
-  } to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-`;
-
-const titleTranslate = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  } to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-`;
-
-const opacityAnimation = keyframes`
-  from {
-    opacity: 0;
-  } to {
-    opacity: 1;
-  }
-`;
+import styled from 'styled-components';
+import { opacityAnimation, translateLeft, translateRight, translateUp } from '../../Global/GlobalAnimation';
+import { lgScreen, mdScreen, xlScreen } from '../../Global/GlobalStyle';
 
 export const Container = styled.div`
   display: flex;
@@ -45,7 +8,7 @@ export const Container = styled.div`
 
 export const SubContainer = styled.div`
   width: 100%;
-  animation: ${featureTranslate} 2s ease none;
+  animation: ${translateRight} 2s ease none;
 
   @media screen and (min-width: ${lgScreen}px) {
     width: 50%;
@@ -65,7 +28,7 @@ export const Greating = styled.h4`
 
 export const Title = styled.h1`
   font-size: 2rem;
-  animation: ${titleTranslate} 2s ease none;
+  animation: ${translateUp} 4s ease none;
 
   span {
     color: ${({ theme }) => theme.colors.firstColor};
@@ -83,6 +46,7 @@ export const Title = styled.h1`
 export const Writer = styled.div`
   font-family: 'Source Code Pro', monospace;
   font-size: 1.3rem;
+  font-weight: 500;
 
   @media screen and (min-width: ${mdScreen}px) {
     font-size: 1.5rem;
@@ -109,36 +73,11 @@ export const Bio = styled.p`
   }
 `;
 
-export const Button = styled.a`
-  padding: 0.8rem 1.6rem;
-  background-color: ${({ theme }) => theme.colors.firstColor};
-  color: #fff;
-  border-radius: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  font-size: 0.8rem;
-  animation: ${opacityAnimation} 2s ease none 0;
-  transition: 0.5s;
-  opacity: 0.94;
-
-  :hover {
-    opacity: 1;
-  }
-
-  @media screen and (min-width: ${mdScreen}px) {
-    font-size: 0.9rem;
-  }
-
-  @media screen and (min-width: ${xlScreen}px) {
-    font-size: 1rem;
-  }
-`;
-
 export const Social = styled.div`
   display: flex;
   margin-top: 2.5rem;
   align-items: center;
-  animation: ${opacityAnimation} 2s ease none 0s;
+  animation: ${opacityAnimation} 4s ease none 0s;
 `;
 
 export const SocialIcon = styled.a`
@@ -167,6 +106,6 @@ export const ImageContainer = styled.div`
   @media screen and (min-width: ${lgScreen}px) {
     display: block;
     width: 50%;
-    animation: ${imageTranslate} 2s ease none 0s;
+    animation: ${translateLeft} 2s ease none 0s;
   }
 `;

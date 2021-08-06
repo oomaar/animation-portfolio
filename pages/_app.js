@@ -1,6 +1,6 @@
 import { ThemeProvider } from 'styled-components';
-import "../font.css";
-import { darkTheme, GlobalStyle, lightTheme } from "../GlobalStyle";
+import "../Global/fonts.css";
+import { darkTheme, GlobalStyle, lightTheme } from "../Global/GlobalStyle";
 
 export default function App({ Component, pageProps }) {
   return (
@@ -12,5 +12,5 @@ export default function App({ Component, pageProps }) {
         </ThemeProvider>
       </ThemeProvider>
     </>
-  )
-}
+  );
+};

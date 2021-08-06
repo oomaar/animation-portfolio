@@ -1,5 +1,5 @@
 import Typewriter from 'typewriter-effect';
-import { Section } from '../../GlobalStyle';
+import { Section, Button } from '../../Global/GlobalStyle';
 import {
     Container,
     SubContainer,
@@ -7,7 +7,6 @@ import {
     Title,
     Writer,
     Bio,
-    Button,
     ImageContainer,
     Social,
     SocialIcon,
@@ -36,7 +35,7 @@ export const Feature = ({ data }) => {
                         />
                     </Writer>
                     <Bio>{data.bio}</Bio>
-                    <Button href="#">Hire me</Button>
+                    <Button up href="#">Hire me</Button>
 
                     <Social>
                         {socialIcons}
