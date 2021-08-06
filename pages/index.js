@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styled from 'styled-components';
-import { About, Feature } from "../components";
+import { About, Feature, Skills } from "../components";
 import resumeData from "../data/resumeData.json";
 
 export default function Home() {
@@ -19,6 +19,7 @@ export default function Home() {
       <Main>
         <Feature data={resumeData.feature} />
         <About data={resumeData.about} />
+        <Skills />
       </Main>
     </Application>
   );
