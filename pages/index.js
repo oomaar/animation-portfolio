@@ -13,7 +13,7 @@ export default function Home() {
 
       <Main>
         <Feature data={resumeData.feature} />
-        <About />
+        <About data={resumeData.about} />
       </Main>
     </Application>
   );
