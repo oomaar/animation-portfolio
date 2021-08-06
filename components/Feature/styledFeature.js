@@ -98,6 +98,7 @@ export const Bio = styled.p`
   margin: 2rem 0;
   animation: ${opacityAnimation} 2s ease none;
   width: 270px;
+  line-height: 1.5;
 
   @media screen and (min-width: ${mdScreen}px) {
     width: 300px;

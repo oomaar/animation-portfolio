@@ -44,6 +44,7 @@ export const AboutMe = styled.p`
   font-size: 1rem;
   animation: ${translateLeft} 2s ease none;
   width: 100%;
+  line-height: 1.5;
 `;
 
 export const Button = styled.a`
