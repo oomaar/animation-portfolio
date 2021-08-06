@@ -8,7 +8,7 @@ import {
 
 export const About = ({ data }) => {
     return (
-        <Section>
+        <Section id="about">
             <Container>
                 <SubContainer>
                     <SectionTitle>About</SectionTitle>
