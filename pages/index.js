@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styled from 'styled-components';
-import { Feature } from "../components";
+import { About, Feature } from "../components";
 import resumeData from "../data/resumeData.json";
 
 export default function Home() {
@@ -13,6 +13,7 @@ export default function Home() {
 
       <Main>
         <Feature data={resumeData.feature} />
+        <About />
       </Main>
     </Application>
   );
@@ -21,7 +22,6 @@ export default function Home() {
 const Application = styled.div``;
 
 const Main = styled.main`
-  padding: 2rem 0 4rem;
   max-width: 1024px;
   margin: 0 1.5rem;
   
