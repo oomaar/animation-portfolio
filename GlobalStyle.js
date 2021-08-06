@@ -73,6 +73,10 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 // Layout
+export const Section = styled.section`
+  padding: 2rem 0 4rem;
+`;
+
 export const SectionTitle = styled.h1`
   font-size: 1.5rem;
   text-align: center;
