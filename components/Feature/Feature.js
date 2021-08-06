@@ -1,7 +1,4 @@
 import Typewriter from 'typewriter-effect';
-import { FaLinkedinIn } from "react-icons/fa";
-import { FiGithub } from "react-icons/fi";
-import { FaFacebook } from "react-icons/fa";
 import { Section } from '../../GlobalStyle';
 import {
     Container,
@@ -17,8 +14,14 @@ import {
 } from "./styledFeature";
 
 export const Feature = ({ data }) => {
+    const socialIcons = data.icons.map((icon, i) => (
+        <SocialIcon key={i} href={icon.url}>
+            <i className={icon.class}></i>
+        </SocialIcon>
+    ));
+
     return (
-        <Section>
+        <Section id="feature">
             <Container>
                 <SubContainer>
                     <Greating>Hi there,</Greating>
@@ -26,7 +29,7 @@ export const Feature = ({ data }) => {
                     <Writer>
                         <Typewriter
                             options={{
-                                strings: ['Frontend Developer', 'Web Designer', 'Web Developer'],
+                                strings: ["Frontend Developer", "Web Designer", "Web Developer"],
                                 autoStart: true,
                                 loop: true,
                             }}
@@ -36,15 +39,7 @@ export const Feature = ({ data }) => {
                     <Button href="#">Hire me</Button>
 
                     <Social>
-                        <SocialIcon href="https://github.com/oomaar">
-                            <FiGithub />
-                        </SocialIcon>
-                        <SocialIcon href="https://www.linkedin.com/in/omar-hassan-8b1869137">
-                            <FaLinkedinIn />
-                        </SocialIcon>
-                        <SocialIcon href="https://www.facebook.com/omarhassan16694">
-                            <FaFacebook />
-                        </SocialIcon>
+                        {socialIcons}
                     </Social>
                 </SubContainer>
                 <ImageContainer>
