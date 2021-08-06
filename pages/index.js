@@ -9,6 +9,11 @@ export default function Home() {
       <Head>
         <title>Omar's Portfolio | Digital Resume</title>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        {/* UniIcons CDN */}
+        <link
+          rel="stylesheet"
+          href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+        />
       </Head>
 
       <Main>
