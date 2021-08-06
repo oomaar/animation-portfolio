@@ -1,7 +1,24 @@
 {
   "feature": {
     "name": "Omar Hassan",
-    "bio": "I build web apps and amazing frontends, I solve variant web problems and also write clean code to make things work."
+    "bio": "I build web apps and amazing frontends, I solve variant web problems and also write clean code to make things work.",
+    "icons": [
+      {
+        "class": "ui uil-github-alt",
+        "name": "Github",
+        "url": "https://github.com/oomaar"
+      },
+      {
+        "class": "ui uil-linkedin-alt",
+        "name": "Linked In",
+        "url": "https://www.linkedin.com/in/omar-hassan-8b1869137"
+      },
+      {
+        "class": "ui uil-facebook-f",
+        "name": "facebook",
+        "url": "https://www.facebook.com/omarhassan16694"
+      }
+    ]
   },
   "about": {
     "description": "I am a creative Frontend Engineer and a Self-Learner.I have always been passionate about everything related to technology and programming, especially the web professions, which I made my career by always giving the best I can give as a Web Developer.I also love to code from scratch, and I enjoy bringing ideas to life in the browser. Aside code I love travelling and making new friends, I love life and people."
