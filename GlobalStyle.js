@@ -79,7 +79,6 @@ export const Section = styled.section`
 
 export const SectionTitle = styled.h1`
   font-size: 1.5rem;
-  text-align: center;
   font-family: 'Indie Flower', cursive;
   
   @media screen and (min-width: 1024px) {
