@@ -1,11 +1,14 @@
-import {
-    SkillsContainer
-} from "./styledSkills";
+import { Section, SectionTitle } from "../../Global/GlobalStyle";
+import { SkillsContainer } from "./styledSkills";
+import { iconsData } from "../../data/icons";
 
 export const Skills = () => {
     return (
-        <SkillsContainer>
-            Skills Component
-        </SkillsContainer>
+        <Section data-aos="zoom-in-down" id="skills">
+            <SkillsContainer>
+                <SectionTitle>Skills</SectionTitle>
+                {iconsData()}
+            </SkillsContainer>
+        </Section>
     );
 };
