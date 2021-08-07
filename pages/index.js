@@ -2,8 +2,15 @@ import Head from "next/head";
 import styled from 'styled-components';
 import { About, Feature, Skills } from "../components";
 import resumeData from "../data/resumeData.json";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
     <Application>
       <Head>
