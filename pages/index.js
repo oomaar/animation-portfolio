@@ -5,6 +5,7 @@ import resumeData from "../data/resumeData.json";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { Qualification } from "../components/Qualification/Qualification";
 
 export default function Home() {
   useEffect(() => {
@@ -27,6 +28,7 @@ export default function Home() {
         <Feature data={resumeData.feature} />
         <About data={resumeData.about} />
         <Skills />
+        <Qualification data={resumeData.qualification} />
       </Main>
     </Application>
   );

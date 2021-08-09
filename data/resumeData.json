@@ -22,5 +22,74 @@
   },
   "about": {
     "description": "I am a creative Frontend Engineer and a Self-Learner.I have always been passionate about everything related to technology and programming, especially the web professions, which I made my career by always giving the best I can give as a Web Developer.I also love to code from scratch, and I enjoy bringing ideas to life in the browser. Aside code I love travelling and making new friends, I love life and people."
+  },
+  "qualification": {
+    "education": [
+      {
+        "id": "1",
+        "category": "education",
+        "position": "left",
+        "title": "Computer Science",
+        "subtitle": "Cairo - Future University in Egypt (FUE)",
+        "start": "2012",
+        "finish": "2017"
+      },
+      {
+        "id": "2",
+        "category": "education",
+        "position": "left",
+        "title": "Graphic Design",
+        "subtitle": "Cairo - Russian Cultural Center",
+        "start": "2017",
+        "finish": "2018"
+      },
+      {
+        "id": "3",
+        "category": "education",
+        "position": "right",
+        "title": "Web Development Course ",
+        "subtitle": "Cairo - Future University in Egypt (FUE)",
+        "start": "2018",
+        "finish": "2019"
+      },
+      {
+        "id": "4",
+        "category": "education",
+        "position": "right",
+        "title": "Full-Stack",
+        "subtitle": "UK - App Brewery",
+        "start": "2019",
+        "finish": "2020"
+      }
+    ],
+    "work": [
+      {
+        "id": "1",
+        "category": "work",
+        "position": "right",
+        "title": "Software Enginner",
+        "subtitle": "PAS - Cairo",
+        "start": "2016",
+        "finish": "2018"
+      },
+      {
+        "id": "2",
+        "category": "work",
+        "position": "left",
+        "title": "Graphic Designer",
+        "subtitle": "Up for Cairo - Cairo",
+        "start": "2018",
+        "finish": "2019"
+      },
+      {
+        "id": "3",
+        "category": "work",
+        "position": "left",
+        "title": "Freelance",
+        "subtitle": "Home - Egypt",
+        "start": "2019",
+        "finish": "Now"
+      }
+    ]
   }
 }
