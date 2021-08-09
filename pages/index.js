@@ -1,11 +1,11 @@
 import Head from "next/head";
 import styled from 'styled-components';
-import { About, Feature, Skills } from "../components";
+import { About, Feature, Skills, Qualification, Portfolio } from "../components";
 import resumeData from "../data/resumeData.json";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import { Qualification } from "../components/Qualification/Qualification";
+import { } from "../components/Qualification/Qualification";
 
 export default function Home() {
   useEffect(() => {
@@ -29,6 +29,7 @@ export default function Home() {
         <About data={resumeData.about} />
         <Skills />
         <Qualification data={resumeData.qualification} />
+        <Portfolio />
       </Main>
     </Application>
   );
