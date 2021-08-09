@@ -71,10 +71,12 @@ export const Data = styled.div`
 `;
 
 export const Title = styled.h3`
+  font-size: 1.12rem;
 `;
 
 export const Subtitle = styled.span`
   display: inline-block;
+  font-size: 0.938rem;
 `;
 
 export const Calendar = styled.div`
@@ -84,6 +86,7 @@ export const Calendar = styled.div`
   justify-content: space-between;
   max-width: 100px;
   margin-top: 1rem;
+  font-size: 0.813rem;
 `;
 
 export const Rounder = styled.span`
