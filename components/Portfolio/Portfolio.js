@@ -2,7 +2,7 @@ import {
     Container,
 } from "./styledPortfolio";
 
-export const Portfolio = () => {
+export const Portfolio = ({ data }) => {
     return (
         <Container>
             <h1>Portfolio Component</h1>
