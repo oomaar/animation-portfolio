@@ -83,7 +83,7 @@ export const SectionTitle = styled.h1`
   font-family: 'Indie Flower', cursive;
   animation: ${translateRight} 2s ease none;
   
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: ${xlScreen}px) {
     font-size: 2rem;
   }
 `;
@@ -99,6 +99,7 @@ export const Button = styled.a`
   font-size: 0.8rem;
   transition: 0.5s;
   opacity: 0.94;
+  width: ${({ link }) => link && '100px'};
 
   :hover {
     opacity: 1;
