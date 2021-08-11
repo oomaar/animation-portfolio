@@ -24,6 +24,7 @@ export const Button = styled.div`
   align-items: center;
   color: ${({ active, theme }) => active && theme.colors.firstColor};
   margin: 0 1rem;
+  font-weight: bold;
 
   :hover {
     color: ${({ theme }) => theme.colors.firstColor};
@@ -34,7 +35,7 @@ export const Button = styled.div`
   }
 
   @media screen and (min-width: ${xlScreen}px) {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 `;
 
@@ -47,11 +48,11 @@ export const Sections = styled.div`
   display: grid;
   justify-content: center;
 
-  @media screen and (min-width: 568px) {
+  @media screen and (min-width: ${mdScreen}px) {
     grid-template-columns: 0.6fr;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${lgScreen}px) {
     grid-template-columns: 0.5fr;
   }
 `;
@@ -71,12 +72,20 @@ export const Data = styled.div`
 `;
 
 export const Title = styled.h3`
-  font-size: 1.12rem;
+  font-size: 0.9rem;
+  
+  @media screen and (min-width: ${mdScreen}px) {
+    font-size: 1.12rem;
+  }
 `;
 
 export const Subtitle = styled.span`
   display: inline-block;
-  font-size: 0.938rem;
+  font-size: 0.8rem;
+  
+  @media screen and (min-width: ${mdScreen}px) {
+    font-size: 0.938rem;
+  }
 `;
 
 export const Calendar = styled.div`
