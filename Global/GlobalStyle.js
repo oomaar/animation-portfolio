@@ -86,6 +86,10 @@ export const SectionTitle = styled.h1`
   @media screen and (min-width: ${xlScreen}px) {
     font-size: 2rem;
   }
+
+  @media screen and (max-width: ${mdScreen}px) {
+    text-align: center;
+  }
 `;
 
 // Buttons
