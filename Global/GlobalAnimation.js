@@ -20,7 +20,7 @@ export const opacityAnimation = keyframes`
 
 export const translateLeft = keyframes`
   from {
-    transform: translateX(2000px);
+    transform: translateX(50px);
     opacity: 0;
   } to {
     transform: translateX(0);
@@ -30,10 +30,20 @@ export const translateLeft = keyframes`
 
 export const translateRight = keyframes`
   from {
-    transform: translateX(-2000px);
+    transform: translateX(-50px);
     opacity: 0;
    } to {
     transform: translateX(0);
     opacity: 1;
    }
+`;
+
+export const zoom = keyframes`
+  from {
+    transform: scale(1);
+  }
+  
+  to {
+    transform: scale(0);
+  }
 `;
