@@ -34,7 +34,7 @@ export default function Home() {
           href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
         />
       </Head>
-      <Header />
+      <Header data={resumeData.header} name={resumeData.feature.name} />
 
       <Main>
         <Feature data={resumeData.feature} />
