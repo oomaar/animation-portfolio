@@ -1,115 +1,79 @@
-import styled from "styled-components";
-import { lgScreen, mdScreen, xlScreen } from "../../Global/GlobalStyle";
+import styled from 'styled-components';
+import { lgScreen, mdScreen } from '../../Global/GlobalStyle';
 
-export const Container = styled.div`
-  margin-top: 4rem;
+export const Container = styled.div``;
 
-   @media screen and (min-width: ${lgScreen}px) {
-    padding-left: 1rem;
-  }
-`;
-
-
-export const Tabs = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  justify-content: center;
-  margin-bottom: 2rem;
-`;
-
-export const Button = styled.div`
-  font-size: 0.8rem;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  color: ${({ active, theme }) => active && theme.colors.firstColor};
-  margin: 0 1rem;
-  font-weight: bold;
-
-  :hover {
-    color: ${({ theme }) => theme.colors.firstColor};
-  }
-
-  @media screen and (min-width: ${mdScreen}px) {
-    font-size: 0.9rem;
-  }
-
-  @media screen and (min-width: ${xlScreen}px) {
-    font-size: 1.2rem;
-  }
-`;
-
-export const Icon = styled.div`
-  font-size: 1.8rem;
-  margin: 0 0.25rem;
-`;
-
-export const Sections = styled.div`
+export const QualificationContainer = styled.div`
   display: grid;
-  justify-content: center;
+  row-gap: 2.5rem;
 
   @media screen and (min-width: ${mdScreen}px) {
-    grid-template-columns: 0.6fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media screen and (min-width: ${lgScreen}px) {
-    grid-template-columns: 0.5fr;
+    column-gap: 6rem;
   }
 `;
 
-export const Content = styled.div`
-  display: ${({ dataTarget }) => dataTarget ? 'block' : 'none'};
+export const QualificationTitle = styled.h3`
+  font-size: 1.3rem;
+  color: #000;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  font-family: 'Indie Flower', cursive;
+  
+  @media screen and (min-width: ${lgScreen}px) {
+    font-size: 1.6rem;
+  }
 `;
 
-export const Data = styled.div`
+export const QualificationIcon = styled.div`
+  font-size: 1.5rem;
+  margin-right: 1rem;
+`;
+
+export const QualificationGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr max-content 1fr;
-  column-gap: 1.5rem;
-
-  @media screen and (max-width: 350px) {
-    gap: 0.5rem;
-  }
+  gap: 1.5rem;
 `;
 
-export const Title = styled.h3`
-  font-size: 0.9rem;
-  
-  @media screen and (min-width: ${mdScreen}px) {
-    font-size: 1.12rem;
-  }
+export const QualificationSubcontainer = styled.div`
+  padding: 1rem;
 `;
 
-export const Subtitle = styled.span`
-  display: inline-block;
-  font-size: 0.8rem;
-  
-  @media screen and (min-width: ${mdScreen}px) {
+export const QualificationArea = styled.h3`
+  font-size: 0.938rem;
+  color: ${({ theme }) => theme.colors.firstColor};
+  margin-bottom: 1rem;
+
+  @media screen and (min-width: ${lgScreen}px) {
     font-size: 0.938rem;
   }
 `;
 
-export const Calendar = styled.div`
-  color: ${({ theme }) => theme.colors.textColorLight};
+export const QualificationBox = styled.div`
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+  font-weight: 300;
+
+  @media screen and (min-width: ${lgScreen}px) {
+    display: flex;
+    justify-content: space-between;
+  }
+`;
+
+export const QualificationWork = styled.span`
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  max-width: 100px;
-  margin-top: 1rem;
-  font-size: 0.813rem;
+  font-size: 0.75rem;
+  color: ${({ theme }) => theme.colors.firstColorLight};
+  padding: 0.3rem 0;
 `;
 
-export const Rounder = styled.span`
-  display: inline-block;
-  width: 13px;
-  height: 13px;
-  background-color: ${({ theme }) => theme.colors.firstColor};
-  border-radius: 50%;
-`;
-
-export const Line = styled.span`
-  display: block;
-  width: 1px;
-  height: 100%;
-  background-color: ${({ theme }) => theme.colors.firstColor};
-  transform: translate(6px, -7px);
+export const QualificationSmallIcon = styled.div`
+  font-size: 0.75rem;
+  color: ${({ theme }) => theme.colors.firstColorLight};
+  margin-right: 1rem;
 `;

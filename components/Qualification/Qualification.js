@@ -1,155 +1,91 @@
-import { useState } from "react";
 import { Section, SectionTitle } from "../../Global/GlobalStyle";
 import {
     Container,
-    Tabs,
-    Button,
-    Icon,
-    Sections,
-    Content,
-    Data,
-    Title,
-    Subtitle,
-    Calendar,
-    Rounder,
-    Line,
-} from "./styledQualification";
+    QualificationContainer,
+    QualificationTitle,
+    QualificationIcon,
+    QualificationGrid,
+    QualificationSubcontainer,
+    QualificationArea,
+    QualificationBox,
+    QualificationWork,
+    QualificationSmallIcon,
+} from './styledQualification';
 
 export const Qualification = ({ data }) => {
-    const [dataTarget, setDataTarget] = useState('education');
-    const [active, setActive] = useState(true);
-
-    const selectQualification = qualification => {
-        if (qualification === 'education') {
-            setDataTarget('education');
-            setActive(true);
-        };
-
-        if (qualification === 'work') {
-            setDataTarget('work')
-            setActive(false);
-        };
-    };
-
-    const educationLength = data.education.length - 1;
-    const workLength = data.work.length - 1;
-
-    const educationGrid = data.education.map((qualification, index) => (
-        <Data key={index}>
-            {qualification.id % 2 === 0 && (
-                <>
-                    <div></div>
-
-                    <div>
-                        <Rounder></Rounder>
-                        {index !== educationLength && (
-                            <Line></Line>
-                        )}
-                    </div>
-                </>
-            )}
-            <div>
-                <Title>{qualification.title}</Title>
-                <Subtitle>{qualification.subtitle}</Subtitle>
-                <Calendar>
-                    <i className="uil uil-calendar-alt"></i>
-                    {qualification.start} - {qualification.finish}
-                </Calendar>
-            </div>
-
-            {qualification.id % 2 === 1 && (
-                <div>
-                    <Rounder></Rounder>
-                    {index !== educationLength && (
-                        <Line></Line>
-                    )}
-                </div>
-            )}
-
-            {(qualification.id === educationLength && (qualification.id % 2 === 1)) && (
-                <div>
-                    <Rounder></Rounder>
-                </div>
-            )}
-        </Data>
+    const workData = data.work.map(work => (
+        <QualificationSubcontainer key={work.id}>
+            <QualificationArea>{work.title}</QualificationArea>
+            <QualificationBox>
+                <QualificationWork>
+                    <QualificationSmallIcon>
+                        <i className="bx bx-briefcase-alt"></i>
+                    </QualificationSmallIcon>
+                    {work.subtitle}
+                </QualificationWork>
+                <QualificationWork>
+                    <QualificationSmallIcon>
+                        <i className="bx bx-calendar-alt"></i>
+                    </QualificationSmallIcon>
+                    {work.start} - {work.finish}
+                </QualificationWork>
+            </QualificationBox>
+        </QualificationSubcontainer>
     ));
 
-    const workGrid = data.work.map((qualification, index) => (
-        <Data key={index}>
-            {qualification.id % 2 === 0 && (
-                <>
-                    <div></div>
+    const educationData = data.education.map(education => (
+        <QualificationSubcontainer key={education.id}>
+            <QualificationArea>{education.title}</QualificationArea>
 
-                    <div>
-                        <Rounder></Rounder>
-                        {index !== workLength && (
-                            <Line></Line>
-                        )}
-                    </div>
-                </>
-            )}
-
-            <div>
-                <Title>{qualification.title}</Title>
-                <Subtitle>{qualification.subtitle}</Subtitle>
-                <Calendar>
-                    <i className="uil uil-calendar-alt"></i>
-                    {qualification.start} - {qualification.finish}
-                </Calendar>
-            </div>
-
-            {qualification.id % 2 === 1 && (
-                <div>
-                    <Rounder></Rounder>
-                    {index !== workLength && (
-                        <Line></Line>
-                    )}
-                </div>
-            )}
-
-            {(qualification.id === workLength && (qualification.id % 2 === 2)) && (
-                <div>
-                    <Rounder></Rounder>
-                </div>
-            )}
-        </Data>
+            <QualificationBox>
+                <QualificationWork>
+                    <QualificationSmallIcon>
+                        <i className="bx bx-book-alt"></i>
+                    </QualificationSmallIcon>
+                    {education.subtitle}
+                </QualificationWork>
+                <QualificationWork>
+                    <QualificationSmallIcon>
+                        <i className="bx bx-calendar-alt"></i>
+                    </QualificationSmallIcon>
+                    {education.start} - {education.finish}
+                </QualificationWork>
+            </QualificationBox>
+        </QualificationSubcontainer>
     ));
 
     return (
-        <Section data-aos="zoom-in-down" data-aos-offset="400" id="qualification">
+        <Section data-aos="zoom-in-down">
             <SectionTitle>Qualification</SectionTitle>
+
             <Container>
-                <Tabs>
-                    <Button
-                        onClick={() => selectQualification('education')}
-                        active={active}
-                    >
-                        <Icon>
-                            <i className="uil uil-graduation-cap"></i>
-                        </Icon>
-                        Education
-                    </Button>
+                <QualificationContainer>
+                    <div>
+                        <QualificationTitle>
+                            <QualificationIcon>
+                                <i className="bx bx-briefcase-alt"></i>
+                            </QualificationIcon>
+                            Work
+                        </QualificationTitle>
 
-                    <Button
-                        onClick={() => selectQualification('work')}
-                        active={!active}
-                    >
-                        <Icon>
-                            <i className="uil uil-briefcase-alt"></i>
-                        </Icon>
-                        Work
-                    </Button>
-                </Tabs>
+                        <QualificationGrid>
+                            {workData}
+                        </QualificationGrid>
+                    </div>
 
-                <Sections>
-                    <Content dataTarget={dataTarget === 'education'}>
-                        {educationGrid}
-                    </Content>
+                    <div>
+                        <QualificationTitle>
+                            <QualificationIcon>
+                                <i className="bx bx-book-bookmark"></i>
+                            </QualificationIcon>
+                            Education
+                        </QualificationTitle>
 
-                    <Content dataTarget={dataTarget === 'work'}>
-                        {workGrid}
-                    </Content>
-                </Sections>
+                        <QualificationGrid>
+                            {educationData}
+                        </QualificationGrid>
+                    </div>
+                </QualificationContainer>
             </Container>
         </Section>
     );
