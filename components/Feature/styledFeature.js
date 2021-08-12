@@ -109,3 +109,36 @@ export const ImageContainer = styled.div`
     animation: ${translateLeft} 2s ease none 0s;
   }
 `;
+
+export const ScrollContainer = styled.div`
+  display: none;
+  margin-top: 14rem;
+
+  @media screen and (min-width: ${lgScreen}px) {
+    display: block;
+  }
+`;
+
+export const ScrollButton = styled.a`
+  color: ${({ theme }) => theme.colors.firstColor};
+  transition: 0.3s;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
+  :hover {
+    transform: translateY(0.25rem);
+  }
+`;
+
+export const ScrollMouse = styled.div`
+  font-size: 2rem;
+  margin: 0 0.5rem 0 0;
+`;
+
+export const ScrollButtonText = styled.span`
+  font-size: 0.8rem;
+  color: ${({ theme }) => theme.colors.firstColor};
+  font-weight: 400;
+  margin-right: 0.25rem;
+`;

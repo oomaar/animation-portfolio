@@ -10,6 +10,10 @@ import {
     ImageContainer,
     Social,
     SocialIcon,
+    ScrollContainer,
+    ScrollButton,
+    ScrollMouse,
+    ScrollButtonText,
 } from "./styledFeature";
 
 export const Feature = ({ data }) => {
@@ -40,6 +44,16 @@ export const Feature = ({ data }) => {
                     <Social>
                         {socialIcons}
                     </Social>
+
+                    <ScrollContainer>
+                        <ScrollButton href="#about">
+                            <ScrollMouse>
+                                <i className="uil uil-mouse-alt"></i>
+                            </ScrollMouse>
+                            <ScrollButtonText> Scroll down </ScrollButtonText>
+                            <i className="uil uil-arrow-down"></i>
+                        </ScrollButton>
+                    </ScrollContainer>
                 </SubContainer>
                 <ImageContainer>
                     <img src="/feature.png" />
