@@ -47,3 +47,13 @@ export const zoom = keyframes`
     transform: scale(0);
   }
 `;
+
+export const scaleOut = keyframes`
+  from {
+    transform: scale(1);
+  }
+  
+  to {
+    transform: scale(0);
+  }
+`;

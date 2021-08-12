@@ -96,35 +96,30 @@
     "clone": [
       {
         "title": "hulu Clone (Next-JS)",
-        "category": "",
         "image": "/portfolio/hulu.png",
         "url": "https://hulu-clone-xi-wheat.vercel.app/",
         "description": "This Project was built using NextJS and Styled-components"
       },
       {
         "title": "Netflix App (React-JS)",
-        "category": "",
         "image": "/portfolio/netflix.jpg",
         "url": "https://dreamy-meninsky-4d3cd3.netlify.app/",
         "description": "This Project was built using NextJS and Styled-components"
       },
       {
         "title": "Twitter Clone (ReactJS)",
-        "category": "",
         "image": "/portfolio/twitter.jpg",
         "url": "https://twitter-4e819.web.app/",
         "description": "Fully Responsive Twitter Clone developed with ReactJS, Styled-components and Firebase."
       },
       {
         "title": "Google Clone (NextJS)",
-        "category": "",
         "image": "/portfolio/google.jpg",
         "url": "https://google-clone-tailwind-delta.vercel.app/",
         "description": "Devloped my own search engine (The Google Clone) with NextJS and Tailwind-CSS."
       },
       {
         "title": "Whatsapp Clone (NextJS)",
-        "category": "",
         "image": "/portfolio/whatsapp.jpg",
         "url": "https://whatsapp-clone-oomaar.vercel.app/",
         "description": "Developed using NextJS, Tailwind-CSS and Firebase."
@@ -134,7 +129,6 @@
       {
         "title": "Makeup Store Demo (ReactJS)",
         "image": "/portfolio/makeup.jpg",
-        "category": "",
         "url": "https://serene-spence-a7962f.netlify.app/",
         "description": "Developed Fully Responsive with ReactJS and Styled-components."
       }
@@ -142,7 +136,6 @@
     "school": [
       {
         "title": "Covid-19 Tracker (ReactJS)",
-        "category": "",
         "image": "/portfolio/covid-tracker.jpg",
         "url": "https://covid-19-tracker-16970.web.app/",
         "description": "Fully Responsive covid-19 Tracker using ReactJS and Styled Components."

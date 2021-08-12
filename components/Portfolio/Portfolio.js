@@ -1,152 +1,84 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { Button, Section, SectionTitle } from "../../Global/GlobalStyle";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation, Pagination, Scrollbar } from 'swiper';
-import 'swiper/swiper-bundle.css';
 import {
     Container,
-    LinksContainer,
-    Link,
-    CarouselContainer,
     PortfolioContainer,
-    ImageContainer,
-    PortfolioImage,
-    TextContainer,
-    PortfolioTitle,
-    PortfolioText,
-    ArrowNext,
-    SwiperPortfolioIcon,
-    ArrowPrev,
-    ProjectContainer,
+    PortfolioNav,
+    PortfolioItem,
+    PortfolioContent,
+    Image,
+    PortfolioData,
+    PortfolioSubtitle,
+    Title,
 } from "./styledPortfolio";
 
-SwiperCore.use([Navigation, Pagination, Scrollbar]);
-
 export const Portfolio = ({ data }) => {
-    const [category, setCategory] = useState("all");
-    const navigationPrevRef = useRef(null);
-    const navigationNextRef = useRef(null);
+    const [activeData, setActiveData] = useState("all");
+    const handleActiveData = name => setActiveData(name);
 
-    const cloneData = data.clone.map((clone, i) => (
-        <ProjectContainer>
-            <SwiperSlide key={i}>
-                <PortfolioContainer>
-                    <ImageContainer href={clone.url}>
-                        <PortfolioImage src={clone.image} alt="" />
-                    </ImageContainer>
-                    <TextContainer>
-                        <PortfolioTitle>{clone.title}</PortfolioTitle>
-                        <PortfolioText>{clone.description}</PortfolioText>
-                        <Button link href={clone.url}>Demo</Button>
-                    </TextContainer>
-                </PortfolioContainer>
-            </SwiperSlide>
-        </ProjectContainer>
+    const cloneData = data.clone.map((project, i) => (
+        <PortfolioContent key={i}>
+            <a href={project.url}>
+                <Image src={project.image} />
+            </a>
+            <PortfolioData>
+                <PortfolioSubtitle>{project.description}</PortfolioSubtitle>
+                <Title>{project.title}</Title>
+                <Button href={project.url}>Demo</Button>
+            </PortfolioData>
+        </PortfolioContent>
     ));
 
-    const schoolData = data.school.map((school, i) => (
-        <ProjectContainer>
-            <SwiperSlide key={i}>
-                <PortfolioContainer>
-                    <ImageContainer href={school.url}>
-                        <PortfolioImage src={school.image} alt="" />
-                    </ImageContainer>
-                    <TextContainer>
-                        <PortfolioTitle>{school.title}</PortfolioTitle>
-                        <PortfolioText>{school.description}</PortfolioText>
-                        <Button link href={school.url}>Demo</Button>
-                    </TextContainer>
-                </PortfolioContainer>
-            </SwiperSlide>
-        </ProjectContainer>
+    const freeData = data.free.map((project, i) => (
+        <PortfolioContent key={i}>
+            <a href={project.url}>
+                <Image src={project.image} />
+            </a>
+            <PortfolioData>
+                <PortfolioSubtitle>{project.description}</PortfolioSubtitle>
+                <Title>{project.title}</Title>
+                <Button href={project.link}>Demo</Button>
+            </PortfolioData>
+        </PortfolioContent>
     ));
 
-    const freeData = data.free.map((free, i) => (
-        <ProjectContainer>
-            <SwiperSlide key={i}>
-                <PortfolioContainer>
-                    <ImageContainer href={free.url}>
-                        <PortfolioImage src={free.image} alt="" />
-                    </ImageContainer>
-                    <TextContainer>
-                        <PortfolioTitle>{free.title}</PortfolioTitle>
-                        <PortfolioText>{free.description}</PortfolioText>
-                        <Button link href={free.url}>Demo</Button>
-                    </TextContainer>
-                </PortfolioContainer>
-            </SwiperSlide>
-        </ProjectContainer>
+    const schoolData = data.school.map((project, i) => (
+        <PortfolioContent key={i}>
+            <a href={project.url}>
+                <Image src={project.image} />
+            </a>
+            <PortfolioData>
+                <PortfolioSubtitle>{project.description}</PortfolioSubtitle>
+                <Title>{project.title}</Title>
+                <Button href={project.url}>Demo</Button>
+            </PortfolioData>
+        </PortfolioContent>
     ));
 
     return (
-        <Section data-aos="zoom-in-down">
+        <Section data-aos="zoom-in-down" id="portfolio">
             <Container>
                 <SectionTitle>Portfolio</SectionTitle>
 
-                <LinksContainer>
-                    <Link onClick={() => setCategory("all")}>All</Link>
-                    <Link onClick={() => setCategory("school")}>School</Link>
-                    <Link onClick={() => setCategory("clone")}>Clones</Link>
-                    <Link onClick={() => setCategory("free")}>Freelance</Link>
-                </LinksContainer>
+                <PortfolioNav>
+                    <PortfolioItem onClick={() => handleActiveData("all")}>All</PortfolioItem>
+                    <PortfolioItem onClick={() => handleActiveData("clones")}>Clones</PortfolioItem>
+                    <PortfolioItem onClick={() => handleActiveData("freelance")}>Freelance</PortfolioItem>
+                    <PortfolioItem onClick={() => handleActiveData("school")}>School</PortfolioItem>
+                </PortfolioNav>
 
-                <CarouselContainer>
-                    <Swiper
-                        loop='true'
-                        navigation={{
-                            nextEl: navigationNextRef.current,
-                            prevEl: navigationPrevRef.current
-                        }}
-                        onSwiper={(swiper) => {
-                            // Delay execution for the refs to be defined
-                            setTimeout(() => {
-                                // Override prevEl & nextEl now that refs are defined
-                                swiper.params.navigation.prevEl = navigationPrevRef.current
-                                swiper.params.navigation.nextEl = navigationNextRef.current
-
-                                // Re-init navigation
-                                swiper.navigation.destroy()
-                                swiper.navigation.init()
-                                swiper.navigation.update()
-                            })
-                        }}
-                        pagination={{ clickable: true }}
-                    >
-                        {category === "all" && (
-                            <div>
-                                {cloneData}
-                                {schoolData}
-                                {freeData}
-                            </div>
-                        )}
-                        {category === "school" && (
-                            <div>
-                                {schoolData}
-                            </div>
-                        )}
-                        {category === "clone" && (
-                            <div>
-                                {cloneData}
-                            </div>
-                        )}
-                        {category === "free" && (
-                            <div>
-                                {freeData}
-                            </div>
-                        )}
-                    </Swiper>
-                    <ArrowNext ref={navigationNextRef} className="swiper-button-next">
-                        <SwiperPortfolioIcon>
-                            &#10095;
-                        </SwiperPortfolioIcon>
-                    </ArrowNext>
-                    <ArrowPrev ref={navigationPrevRef} className="swiper-button-prev">
-                        <SwiperPortfolioIcon>
-                            &#10094;
-                        </SwiperPortfolioIcon>
-                    </ArrowPrev>
-                    <div className="swiper-pagination"></div>
-                </CarouselContainer>
+                <PortfolioContainer>
+                    {activeData === "all" && (
+                        <>
+                            {cloneData}
+                            {freeData}
+                            {schoolData}
+                        </>
+                    )}
+                    {activeData === "clones" && cloneData}
+                    {activeData === "freelance" && freeData}
+                    {activeData === "school" && schoolData}
+                </PortfolioContainer>
             </Container>
         </Section>
     );
