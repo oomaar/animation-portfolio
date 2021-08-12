@@ -49,6 +49,7 @@ export const PortfolioItem = styled.span`
 export const Image = styled.img`
   width: 100%;
   transition: 0.4s;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 `;
 
 export const PortfolioContent = styled.div`

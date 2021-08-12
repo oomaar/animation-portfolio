@@ -123,6 +123,12 @@
         "image": "/portfolio/whatsapp.jpg",
         "url": "https://whatsapp-clone-oomaar.vercel.app/",
         "description": "Developed using NextJS, Tailwind-CSS and Firebase."
+      },
+      {
+        "title": "Geforce Clone (Next-JS)",
+        "image": "/portfolio/geforce.jpg",
+        "url": "https://geforce-clone-oomaar.vercel.app/",
+        "description": "Developed using NextJS and styled-components."
       }
     ],
     "free": [
