@@ -29,7 +29,7 @@ export default function Home() {
         <Skills />
         <Qualification data={resumeData.qualification} />
         <Portfolio data={resumeData.portfolio} />
-        <Contact />
+        <Contact data={resumeData.contact} />
       </Main>
     </Application>
   );

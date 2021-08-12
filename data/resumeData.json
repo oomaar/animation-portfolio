@@ -141,5 +141,10 @@
         "description": "Fully Responsive covid-19 Tracker using ReactJS and Styled Components."
       }
     ]
+  },
+  "contact": {
+    "location": "#123 Lima-peru",
+    "email": "email@gmail.com",
+    "phone": "+0-999-888-777"
   }
 }
