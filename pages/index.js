@@ -1,14 +1,26 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Head from "next/head";
 import styled from 'styled-components';
-import { About, Feature, Skills, Qualification, Portfolio, Contact } from "../components";
+import { About, Feature, Skills, Qualification, Portfolio, Contact, ScrollUp } from "../components";
 import resumeData from "../data/resumeData.json";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
 export default function Home() {
+  const [show, setShow] = useState(false);
+
   useEffect(() => {
     Aos.init({ duration: 1000 });
+  }, []);
+
+  const showScrollUpLink = () => {
+    window.scrollY > 100 ? setShow(true) : setShow(false);
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", showScrollUpLink);
+
+    return () => window.removeEventListener("scroll", showScrollUpLink);
   }, []);
 
   return (
@@ -31,6 +43,7 @@ export default function Home() {
         <Portfolio data={resumeData.portfolio} />
         <Contact data={resumeData.contact} />
       </Main>
+      <ScrollUp show={show} />
     </Application>
   );
 };
