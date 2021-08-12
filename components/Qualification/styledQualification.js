@@ -6,6 +6,7 @@ export const Container = styled.div``;
 export const QualificationContainer = styled.div`
   display: grid;
   row-gap: 2.5rem;
+  color: ${({ theme }) => theme.colors.textColor};
 
   @media screen and (min-width: ${mdScreen}px) {
     grid-template-columns: repeat(2, 1fr);
@@ -23,6 +24,7 @@ export const QualificationTitle = styled.h3`
   display: flex;
   align-items: center;
   font-family: 'Indie Flower', cursive;
+  color: ${({ theme }) => theme.colors.titleColor};
   
   @media screen and (min-width: ${lgScreen}px) {
     font-size: 1.6rem;
@@ -45,7 +47,7 @@ export const QualificationSubcontainer = styled.div`
 
 export const QualificationArea = styled.h3`
   font-size: 0.938rem;
-  color: ${({ theme }) => theme.colors.firstColor};
+  color: ${({ theme }) => theme.colors.titleColor};
   margin-bottom: 1rem;
 
   @media screen and (min-width: ${lgScreen}px) {

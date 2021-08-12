@@ -18,4 +18,5 @@ export const AboutMe = styled.p`
   animation: ${translateLeft} 2s ease none;
   width: 100%;
   line-height: 1.5;
+  color: ${({ theme }) => theme.colors.textColor};
 `;

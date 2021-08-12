@@ -36,6 +36,7 @@ export const PortfolioItem = styled.span`
   cursor: pointer;
   font-size: 1rem;
   transition: 0.5s;
+  color: ${({ theme }) => theme.colors.titleColor};
 
   :hover {
     transform: scale(1.1);
@@ -53,7 +54,8 @@ export const Image = styled.img`
 `;
 
 export const PortfolioContent = styled.div`
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.colors.containerColor};
+  color: ${({ theme }) => theme.colors.textColor};
   border-radius: 0.5rem;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(174, 190, 205, 0.3);
@@ -73,12 +75,12 @@ export const PortfolioData = styled.div`
 `;
 
 export const Title = styled.h3`
-  color: ${({ theme }) => theme.colors.firstColor};
+  color: ${({ theme }) => theme.colors.titleColor};
   margin: 2rem 0;
   font-size: clamp(1.5rem, 2vw, 2rem);
 `;
 
 export const PortfolioSubtitle = styled.span`
-  color: ${({ theme }) => theme.colors.firstColorLight};
+  color: ${({ theme }) => theme.colors.textColor};
   font-size: clamp(1rem, 1vw, 1.1rem);
 `;

@@ -19,7 +19,7 @@ export const ContactContent = styled.div`
 `;
 
 export const ContactBox = styled.div`
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.colors.containerColor};
   border-radius: 0.5rem;
   padding: 1.5rem;
   text-align: center;
@@ -37,17 +37,18 @@ export const ContactIcon = styled.div`
 `;
 
 export const ContactTitle = styled.h3`
-  color: ${({ theme }) => theme.colors.firstColor};
   font-size: 1.25rem;
   margin: 1rem 0;
+  color: ${({ theme }) => theme.colors.titleColor};
 `;
 
 export const ContactText = styled.span`
   font-size: 1.1rem;
+  color: ${({ theme }) => theme.colors.textColor};
 `;
 
 export const ContactSocial = styled.a`
-  color: ${({ theme }) => theme.colors.firstColorLight};
+  color: ${({ theme }) => theme.colors.firstColor};
   font-size: 1.25rem;
   margin: 0 1rem;
 `;
@@ -75,6 +76,8 @@ export const Input = styled.input`
   color: ${({ theme }) => theme.colors.firstColor};
   border-radius: 0.5rem;
   margin-bottom: 1rem;
+  background-color: ${({ theme }) => theme.colors.containerColor};
+  color: ${({ theme }) => theme.colors.textColor};
   
   @media screen and (min-width: ${lgScreen}px) {
       font-size: 1rem;
@@ -91,6 +94,8 @@ export const TextArea = styled.textarea`
   color: ${({ theme }) => theme.colors.firstColor};
   border-radius: 0.5rem;
   margin-bottom: 1rem;
+  background-color: ${({ theme }) => theme.colors.containerColor};
+  color: ${({ theme }) => theme.colors.textColor};
 
   @media screen and (min-width: ${lgScreen}px) {
     font-size: 1rem;

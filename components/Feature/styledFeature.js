@@ -9,6 +9,7 @@ export const Container = styled.div`
 export const SubContainer = styled.div`
   width: 100%;
   animation: ${translateRight} 2s ease none;
+  color: ${({ theme }) => theme.colors.textColor};
 
   @media screen and (min-width: ${lgScreen}px) {
     width: 50%;

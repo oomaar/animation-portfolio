@@ -1,6 +1,4 @@
-import { useState } from "react";
-// import UilMoon from "@iconscout/react-unicons/icons/uil-moon";
-// import UilSun from "@iconscout/react-unicons/icons/uil-sun";
+import { useEffect, useState } from "react";
 import {
     Container,
     HeaderTag,
@@ -17,7 +15,7 @@ import {
     NavToggle,
 } from "./styledHeader";
 
-export const Header = ({ data, name }) => {
+export const Header = ({ data, name, toggleTheme, setToggleTheme }) => {
     const [shadow, setShadow] = useState(false);
     const [toggleShow, setToggleShow] = useState(false);
 
@@ -25,6 +23,38 @@ export const Header = ({ data, name }) => {
     const toggleHeaderClose = () => setToggleShow(false);
     const showShadow = () => window.scrollY > 100 ? setShadow(true) : setShadow(false);
     const activeLink = () => toggleHeaderClose();
+
+    const checkTheme = () => {
+        switch (toggleTheme) {
+            case "light":
+                setToggleTheme("dark");
+                localStorage.setItem("toggleTheme", "dark")
+                return document.documentElement.setAttribute("data-theme", "dark");
+
+            case "dark":
+                setToggleTheme("light");
+                localStorage.setItem("toggleTheme", "light")
+                return document.documentElement.setAttribute("data-theme", "light");
+
+            default:
+                setToggleTheme("light");
+                localStorage.setItem("toggleTheme", "light")
+                return document.documentElement.setAttribute("data-theme", "light");
+        };
+    };
+
+    useEffect(() => {
+        if (localStorage.getItem("toggleTheme")) {
+            setToggleTheme(localStorage.getItem("toggleTheme"));
+            document.documentElement.setAttribute("data-theme", localStorage.getItem("theme"));
+        } else {
+            checkTheme(null);
+        };
+    });
+
+    useEffect(() => {
+        window.addEventListener("scroll", showShadow);
+    }, []);
 
     const navLinks = data.map(link => {
         return (
@@ -64,13 +94,13 @@ export const Header = ({ data, name }) => {
                     </NavMenu>
 
                     <NavBtns>
-                        {/* <ChangeTheme>
+                        <ChangeTheme>
                             {toggleTheme === 'light' ? (
-                                <UilMoon onClick={checkTheme} />
+                                <i className="uil uil-moon" onClick={checkTheme}></i>
                             ) : (
-                                <UilSun onClick={checkTheme} />
+                                <i className="uil uil-sun" onClick={checkTheme}></i>
                             )}
-                        </ChangeTheme> */}
+                        </ChangeTheme>
                         <NavToggle>
                             <i className="uil uil-align-left" onClick={toggleHeaderOpen}></i>
                         </NavToggle>

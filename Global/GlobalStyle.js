@@ -82,6 +82,7 @@ export const SectionTitle = styled.h1`
   font-size: 1.5rem;
   font-family: 'Indie Flower', cursive;
   animation: ${translateRight} 2s ease none;
+  color: ${({ theme }) => theme.colors.titleColor};
   
   @media screen and (min-width: ${xlScreen}px) {
     font-size: 2rem;
