@@ -53,7 +53,7 @@ export default function Home() {
           <Contact data={resumeData.contact} />
         </Main>
         <ScrollUp show={show} />
-        <Footer />
+        <Footer data={resumeData.feature.icons} name={resumeData.feature.name} />
       </Application>
     </ThemeProvider>
   );
