@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
 import styled from 'styled-components';
-import { About, Feature, Skills, Qualification, Portfolio, Contact, ScrollUp } from "../components";
+import { About, Feature, Skills, Qualification, Portfolio, Contact, ScrollUp, Header } from "../components";
 import resumeData from "../data/resumeData.json";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -34,6 +34,7 @@ export default function Home() {
           href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
         />
       </Head>
+      <Header />
 
       <Main>
         <Feature data={resumeData.feature} />
