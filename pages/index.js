@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
 import styled, { ThemeProvider } from 'styled-components';
-import { About, Feature, Skills, Qualification, Portfolio, Contact, ScrollUp, Header } from "../components";
+import { About, Feature, Skills, Qualification, Portfolio, Contact, ScrollUp, Header, Footer } from "../components";
 import resumeData from "../data/resumeData.json";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -53,6 +53,7 @@ export default function Home() {
           <Contact data={resumeData.contact} />
         </Main>
         <ScrollUp show={show} />
+        <Footer />
       </Application>
     </ThemeProvider>
   );
