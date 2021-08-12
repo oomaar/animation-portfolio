@@ -24,7 +24,7 @@ export const Contact = ({ data }) => {
                     <ContactContent>
                         <ContactBox>
                             <ContactIcon>
-                                <i class="uil uil-estate"></i>
+                                <i className="uil uil-estate"></i>
                             </ContactIcon>
                             <ContactTitle>Location</ContactTitle>
                             <ContactText>{data.location}</ContactText>
@@ -32,7 +32,7 @@ export const Contact = ({ data }) => {
 
                         <ContactBox>
                             <ContactIcon>
-                                <i class="uil uil-envelope"></i>
+                                <i className="uil uil-envelope"></i>
                             </ContactIcon>
                             <ContactTitle>Email</ContactTitle>
                             <ContactText>{data.email}</ContactText>
@@ -40,7 +40,7 @@ export const Contact = ({ data }) => {
 
                         <ContactBox>
                             <ContactIcon>
-                                <i class="uil uil-phone"></i>
+                                <i className="uil uil-phone"></i>
                             </ContactIcon>
                             <ContactTitle>Phone</ContactTitle>
                             <ContactText>{data.phone}</ContactText>
@@ -48,18 +48,18 @@ export const Contact = ({ data }) => {
 
                         <ContactBox>
                             <ContactIcon>
-                                <i class="uil uil-comment"></i>
+                                <i className="uil uil-comment"></i>
                             </ContactIcon>
                             <ContactTitle>Chat</ContactTitle>
                             <div>
                                 <ContactSocial href="#">
-                                    <i class="uil uil-whatsapp"></i>
+                                    <i className="uil uil-whatsapp"></i>
                                 </ContactSocial>
                                 <ContactSocial href="#">
-                                    <i class="uil uil-telegram-alt"></i>
+                                    <i className="uil uil-telegram-alt"></i>
                                 </ContactSocial>
                                 <ContactSocial href="#">
-                                    <i class="uil uil-facebook-messenger-alt"></i>
+                                    <i className="uil uil-facebook-messenger-alt"></i>
                                 </ContactSocial>
                             </div>
                         </ContactBox>
