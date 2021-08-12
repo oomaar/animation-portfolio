@@ -2,6 +2,9 @@ import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
 import { translateRight } from "./GlobalAnimation";
 
+// Header Height
+export const headerHeight = '3rem';
+
 // View Ports
 export const smScreen = 280;
 export const mdScreen = 568;
@@ -57,6 +60,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: 'Comfortaa', cursive;
+    background-color: ${({ theme }) => theme.colors.bodyColor};
   }
 
   a {

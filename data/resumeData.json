@@ -4,8 +4,8 @@
       "id": "1",
       "name": "Home",
       "icon": "ui uil-estate",
-      "href": "#home",
-      "section": "home"
+      "href": "#feature",
+      "section": "feature"
     },
     {
       "id": "2",
@@ -23,10 +23,10 @@
     },
     {
       "id": "4",
-      "name": "Services",
+      "name": "Qualification",
       "icon": "ui uil-briefcase-alt",
-      "href": "#services",
-      "section": "services"
+      "href": "#qualification",
+      "section": "qualification"
     },
     {
       "id": "5",

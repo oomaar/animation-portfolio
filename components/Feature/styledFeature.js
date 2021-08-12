@@ -4,6 +4,10 @@ import { lgScreen, mdScreen, xlScreen } from '../../Global/GlobalStyle';
 
 export const Container = styled.div`
   display: flex;
+
+  @media (min-width: ${lgScreen}px) {
+    margin-top: 5rem;
+  }
 `;
 
 export const SubContainer = styled.div`

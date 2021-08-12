@@ -1,10 +1,12 @@
 import styled from 'styled-components';
-import { lgScreen, smScreen, xlScreen } from '../../Global/GlobalStyle';
+import { headerHeight, lgScreen, smScreen, xlScreen } from '../../Global/GlobalStyle';
 import { Link as ScrollLink } from "react-scroll";
 
 export const Container = styled.div`
   @media screen and (min-width: ${lgScreen}px) {
-    padding-left: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 `;
 
@@ -15,7 +17,7 @@ export const HeaderTag = styled.header`
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 200;
 
   @media screen and (min-width: ${lgScreen}px) {
     top: 0;
@@ -30,13 +32,15 @@ export const HeaderTag = styled.header`
 
 export const Nav = styled.nav`
   max-width: 968px;
-  height: 3rem;
+  height: ${headerHeight};
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 0.5rem;
+  width: 100%;
 
   @media screen and (min-width: ${lgScreen}px) {
-    height: calc(3rem + 1.5rem);
+    height: calc(${headerHeight} + 1.5rem);
     column-gap: 1rem;
   }
 `;
@@ -72,6 +76,7 @@ export const NavList = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  padding: 0;
 
   @media screen and (max-width: ${smScreen}px) {
     column-gap: 0;

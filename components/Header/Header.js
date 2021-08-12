@@ -66,7 +66,7 @@ export const Header = ({ data, name, toggleTheme, setToggleTheme }) => {
                     duration={50}
                     spy={true}
                     exact="true"
-                    offset={-50}
+                    offset={-30}
                     activeClass="active-link"
                 >
                     <NavIcon>
