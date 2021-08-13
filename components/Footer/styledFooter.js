@@ -74,9 +74,10 @@ export const FooterSocials = styled.div`
 `;
 
 export const FooterSocial = styled.a`
-  font-size: 1.25rem;
+  font-size: 2rem;
   margin-right: 1.5rem;
   color: #fff;
+  transition: 0.5s;
   
   :hover {
     color: ${({ theme }) => theme.colors.firstColorLighter};
