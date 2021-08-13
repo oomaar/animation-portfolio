@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
 import styled, { ThemeProvider } from 'styled-components';
-import { About, Feature, Skills, Qualification, Portfolio, Contact, ScrollUp, Header, Footer } from "../components";
+import { About, Feature, Skills, Qualification, Portfolio, Contact, ScrollUp, Header, Footer, Project } from "../components";
 import resumeData from "../data/resumeData.json";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -38,6 +38,7 @@ export default function Home() {
             href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
           />
         </Head>
+
         <Main>
           <Header
             toggleTheme={toggleTheme}
@@ -50,6 +51,7 @@ export default function Home() {
           <Skills />
           <Qualification data={resumeData.qualification} />
           <Portfolio data={resumeData.portfolio} />
+          <Project />
           <Contact data={resumeData.contact} />
         </Main>
         <ScrollUp show={show} />
