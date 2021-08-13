@@ -100,8 +100,8 @@ export const SectionTitle = styled.h1`
 // Buttons
 export const Button = styled.a`
   padding: 0.8rem 1.6rem;
-  background-color: ${({ theme }) => theme.colors.firstColor};
-  color: #fff;
+  background-color: ${({ theme, white }) => white ? "#fff" : theme.colors.firstColor};
+  color: ${({ white }) => white ? "#000" : "#fff"};
   border-radius: 1rem;
   text-transform: ${({ up }) => up ? 'uppercase' : 'capitalize'};
   letter-spacing: 0.1rem;
