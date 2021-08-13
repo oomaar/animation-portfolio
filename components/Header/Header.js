@@ -66,7 +66,7 @@ export const Header = ({ data, name, toggleTheme, setToggleTheme }) => {
                     duration={50}
                     spy={true}
                     exact="true"
-                    offset={-30}
+                    offset={-50}
                     activeClass="active-link"
                 >
                     <NavIcon>
@@ -82,7 +82,9 @@ export const Header = ({ data, name, toggleTheme, setToggleTheme }) => {
         <HeaderTag shadow={shadow}>
             <Container>
                 <Nav>
-                    <Logo>{name}</Logo>
+                    <a href="#feature">
+                        <Logo>{name}</Logo>
+                    </a>
 
                     <NavMenu toggleShow={toggleShow}>
                         <NavList>

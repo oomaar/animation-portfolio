@@ -40,7 +40,6 @@ export const Nav = styled.nav`
   width: 100%;
 
   @media screen and (min-width: ${lgScreen}px) {
-    height: calc(${headerHeight} + 1.5rem);
     column-gap: 1rem;
   }
 `;
@@ -55,7 +54,7 @@ export const NavMenu = styled.div`
     background-color: ${({ theme }) => theme.colors.bodyColor};
     border-radius: 1.5rem 1.5rem 0 0;
     box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
-    padding: 2rem 1.5rem 4rem;
+    padding: 2rem 1.5rem 2rem;
     position: fixed;
     bottom: ${({ toggleShow }) => toggleShow ? '0' : '-100%'};
     left: 0;
@@ -115,14 +114,20 @@ export const NavLink = styled(ScrollLink)`
   align-items: center;
   font-size: 0.813rem;
   color: ${({ theme }) => theme.colors.titleColor};
-  font-weight: 400;
+  font-weight: 500;
+  transition: 0.5s;
 
   :hover {
     color: ${({ theme }) => theme.colors.firstColor};
+    transform: scale(1.1);
+  }
+
+  @media screen and (min-width: ${lgScreen}px) {
+    font-size: 0.938rem;
   }
 
   @media screen and (min-width: ${xlScreen}px) {
-    font-size: 0.938rem;
+    font-size: 1rem;
   }
 `;
 
