@@ -75,6 +75,22 @@ export const GlobalStyle = createGlobalStyle`
   ul {
     list-style: none;
   }
+
+  // ==================== SCROLL-BAR  ====================
+  ::-webkit-scrollbar {
+    width: 0.6rem;
+    background-color: ${({ theme }) => theme.colors.scrollBarColor};
+    border-radius: 0.5rem;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.colors.scrollThumbColor};
+    border-radius: 0.5rem;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: ${({ theme }) => theme.colors.textColorLight};
+  }
 `;
 
 // Layout
