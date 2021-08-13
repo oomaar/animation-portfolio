@@ -20,11 +20,11 @@ export const Project = () => {
                             <ProjectSubtitle>
                                 Contact me now and get a 30% discount on your new project.
                             </ProjectSubtitle>
-                            <Button href="#contact">
+                            <Button white href="#contact">
                                 Contact Me
                             </Button>
                         </ProjectData>
-                        <ProjectImage src="/react-light.png" />
+                        <ProjectImage src="/project.png" />
                     </ProjectContainer>
                 </Container>
             </ProjectBackground>

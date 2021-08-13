@@ -11,6 +11,7 @@ export const ProjectBackground = styled.div`
   text-align: center;
   background-color: ${({ theme }) => theme.colors.firstColor};
   padding-top: 3rem;
+  border-radius: 0.5rem;
 
   @media screen and (min-width: ${lgScreen}px) {
     background: none;
@@ -26,6 +27,11 @@ export const ProjectData = styled.div`
 export const ProjectContainer = styled.div`
   display: grid;
   gap: 1.5rem;
+  transition: 0.5s;
+
+  :hover {
+    box-shadow: 0 6px 8px rgba(174, 190, 205, 0.5);
+  }
   
   @media screen and (min-width: 568px) {
     grid-template-columns: repeat(2, 1fr);
