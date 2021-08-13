@@ -77,10 +77,12 @@ export const PortfolioData = styled.div`
 export const Title = styled.h3`
   color: ${({ theme }) => theme.colors.titleColor};
   margin: 2rem 0;
-  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
 `;
 
-export const PortfolioSubtitle = styled.span`
+export const PortfolioSubtitle = styled.div`
   color: ${({ theme }) => theme.colors.textColor};
   font-size: clamp(1rem, 1vw, 1.1rem);
+  height: 100px;
+  overflow: hidden;
 `;
