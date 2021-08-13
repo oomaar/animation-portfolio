@@ -56,9 +56,8 @@ export const Qualification = ({ data }) => {
 
     return (
         <Section id="qualification" data-aos="zoom-in-down">
-            <SectionTitle>Qualification</SectionTitle>
-
             <Container>
+                <SectionTitle>Qualification</SectionTitle>
                 <QualificationContainer>
                     <div>
                         <QualificationTitle>

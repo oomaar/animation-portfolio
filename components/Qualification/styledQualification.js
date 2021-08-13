@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 import { lgScreen, mdScreen } from '../../Global/GlobalStyle';
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  @media screen and (min-width: ${lgScreen}px) {
+    padding-left: 1rem;
+  }
+`;
 
 export const QualificationContainer = styled.div`
   display: grid;
