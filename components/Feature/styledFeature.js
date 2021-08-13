@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { opacityAnimation, translateLeft, translateRight, translateUp } from '../../Global/GlobalAnimation';
-import { lgScreen, mdScreen, xlScreen } from '../../Global/GlobalStyle';
+import { headerHeight, lgScreen, mdScreen, xlScreen } from '../../Global/GlobalStyle';
 
 export const Container = styled.div`
   display: flex;
@@ -117,7 +117,7 @@ export const ImageContainer = styled.div`
 
 export const ScrollContainer = styled.div`
   display: none;
-  margin-top: 14rem;
+  margin-top: 4rem;
 
   @media screen and (min-width: ${lgScreen}px) {
     display: block;

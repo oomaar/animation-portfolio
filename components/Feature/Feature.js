@@ -56,7 +56,7 @@ export const Feature = ({ data }) => {
                     </ScrollContainer>
                 </SubContainer>
                 <ImageContainer>
-                    <img src="/feature.png" />
+                    <img src="/react-light.png" />
                 </ImageContainer>
             </Container>
         </Section>
