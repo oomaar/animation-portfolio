@@ -4,7 +4,7 @@ import { lgScreen, mdScreen, xlScreen } from '../../Global/GlobalStyle';
 
 export const Container = styled.div`
   @media screen and (min-width: ${lgScreen}px) {
-    padding: 0 1rem;
+    padding: 15rem 1rem 0;
   }
 `;
 
