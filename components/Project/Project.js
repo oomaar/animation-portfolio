@@ -1,11 +1,33 @@
+import { Button, Section } from "../../Global/GlobalStyle";
 import {
     Container,
+    ProjectBackground,
+    ProjectContainer,
+    ProjectData,
+    ProjectTitle,
+    ProjectSubtitle,
+    ProjectImage,
 } from "./styledProject";
 
 export const Project = () => {
     return (
-        <Container>
-            Project in mind
-        </Container>
+        <Section>
+            <ProjectBackground>
+                <Container>
+                    <ProjectContainer>
+                        <ProjectData>
+                            <ProjectTitle>You have a new project !</ProjectTitle>
+                            <ProjectSubtitle>
+                                Contact me now and get a 30% discount on your new project.
+                            </ProjectSubtitle>
+                            <Button href="#contact">
+                                Contact Me
+                            </Button>
+                        </ProjectData>
+                        <ProjectImage src="/react-light.png" />
+                    </ProjectContainer>
+                </Container>
+            </ProjectBackground>
+        </Section>
     );
 };

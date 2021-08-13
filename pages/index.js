@@ -50,8 +50,8 @@ export default function Home() {
           <About data={resumeData.about} />
           <Skills />
           <Qualification data={resumeData.qualification} />
-          <Portfolio data={resumeData.portfolio} />
           <Project />
+          <Portfolio data={resumeData.portfolio} />
           <Contact data={resumeData.contact} />
         </Main>
         <ScrollUp show={show} />
